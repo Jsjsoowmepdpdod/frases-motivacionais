@@ -50,29 +50,23 @@ const phrases = [
 "Seu futuro começa com as escolhas que faz hoje.",
 "A única pessoa que pode limitar você é você mesmo.",
 ];
-
 let isTyping = false; 
 let lastIndex = -1;
-
 function showPhrase() {
     if (isTyping) return;
-
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * phrases.length);
     } while (randomIndex === lastIndex); 
-
     lastIndex = randomIndex;
     const phraseElement = document.getElementById("phrase");
     phraseElement.textContent = '';
     typePhrase(phrases[randomIndex], phraseElement);
 }
-
 function typePhrase(phrase, element) {
     isTyping = true; 
     let index = 0;
     const typingSpeed = 100; 
-
     function type() {
         if (index < phrase.length) {
             element.textContent += phrase.charAt(index); 
@@ -82,8 +76,6 @@ function typePhrase(phrase, element) {
             isTyping = false; 
         }
     }
-
     type(); 
 }
 
- 
