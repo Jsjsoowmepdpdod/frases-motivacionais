@@ -1,39 +1,24 @@
-/* Estilo do corpo com animação de gradiente */
 body {
-    background: linear-gradient(135deg, #001f3f, #0056b3, #00aaff); /* Gradiente de azul escuro a azul claro */
-    background-size: 200% 200%; /* Aumenta o tamanho para mais movimento */
+    background-color: #f0f8ff;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    animation: waveBackground 5s linear infinite; /* Animação contínua e rápida */
 }
 
-/* Animação do gradiente para simular movimento de água */
-@keyframes waveBackground {
-    0% {
-        background-position: 0% 50%; /* Posição inicial */
-    }
-    100% {
-        background-position: 100% 50%; /* Posição final */
-    }
-}
-
-/* Estilos do container e elementos */
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
-    font-family: 'Dancing Script', cursive;
 }
 
 button {
@@ -70,4 +55,25 @@ p {
     to {
         opacity: 1;
     }
+}
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+body {
+    background: linear-gradient(135deg, #002aff, #e4e6fb);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive; /* Define a fonte cursiva para o título */
 }
