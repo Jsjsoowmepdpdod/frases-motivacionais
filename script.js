@@ -51,102 +51,47 @@ const phrases = [
 "A única pessoa que pode limitar você é você mesmo.",
 ];
 
-let isTyping = false; // Flag para evitar múltiplas digitações
+let isTyping = false; 
 
 function showPhrase() {
-    if (isTyping) return; // Não permite iniciar outra digitação
+    if (isTyping) return; 
 
     const randomIndex = Math.floor(Math.random() * phrases.length);
     const phraseElement = document.getElementById("phrase");
-    phraseElement.textContent = ''; // Limpa a frase anterior
-    typePhrase(phrases[randomIndex], phraseElement); // Inicia a digitação
+    phraseElement.textContent = ''; 
+    typePhrase(phrases[randomIndex], phraseElement);
 }
 
 function typePhrase(phrase, element) {
-    isTyping = true; // Marca que a digitação começou
+    isTyping = true; 
     let index = 0;
-    const typingSpeed = 100; // Velocidade de digitação em milissegundos
+    const typingSpeed = 100; 
 
     function type() {
         if (index < phrase.length) {
-            element.textContent += phrase.charAt(index); // Adiciona uma letra
+            element.textContent += phrase.charAt(index); 
             index++;
-            setTimeout(type, typingSpeed); // Chama a função novamente após um atraso
+            setTimeout(type, typingSpeed); 
         } else {
-            isTyping = false; // Marca que a digitação terminou
+            isTyping = false; 
         }
     }
 
-    type(); // Inicia o efeito de digitação
+    type(); 
 }
-let lastIndex = -1; // Índice da última frase exibida
-
+let lastIndex = -1;
 function showPhrase() {
     if (isTyping) return;
 
     let randomIndex;
     do {
         randomIndex = Math.floor(Math.random() * phrases.length);
-    } while (randomIndex === lastIndex); // Repete até achar um índice diferente
+    } while (randomIndex === lastIndex); 
 
-    lastIndex = randomIndex; // Atualiza o índice da última frase exibida
+    lastIndex = randomIndex;
     const phraseElement = document.getElementById("phrase");
     phraseElement.textContent = '';
     typePhrase(phrases[randomIndex], phraseElement);
 }
-function calculateResult() {
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    const q3 = document.querySelector('input[name="q3"]:checked');
-    const q4 = document.querySelector('input[name="q4"]:checked');
-    const q5 = document.querySelector('input[name="q5"]:checked');
-    const resultElement = document.getElementById("result");
 
-    if (!q1 || !q2 || !q3 || !q4 || !q5) {
-        resultElement.textContent = "Por favor, responda todas as perguntas.";
-        return;
-    }
-
-    const scores = {
-        "desafios": 0,
-        "resultados": 0,
-        "apoio": 0,
-        "comunidade": 0
-    };
-
-    scores[q1.value - 1 === 0 ? "desafios" : (q1.value - 1 === 1 ? "resultados" : (q1.value - 1 === 2 ? "apoio" : "comunidade"))]++;
-    scores[q2.value - 1 === 0 ? "desafios" : (q2.value - 1 === 1 ? "resultados" : (q2.value - 1 === 2 ? "apoio" : "comunidade"))]++;
-    scores[q3.value - 1 === 0 ? "desafios" : (q3.value - 1 === 1 ? "resultados" : (q3.value - 1 === 2 ? "apoio" : "comunidade"))]++;
-    scores[q4.value - 1 === 0 ? "desafios" : (q4.value - 1 === 1 ? "resultados" : (q4.value - 1 === 2 ? "apoio" : "comunidade"))]++;
-    scores[q5.value - 1 === 0 ? "desafios" : (q5.value - 1 === 1 ? "resultados" : (q5.value - 1 === 2 ? "apoio" : "comunidade"))]++;
-
-    let maxScore = 0;
-    let motivationType = '';
-
-    for (const [key, value] of Object.entries(scores)) {
-        if (value > maxScore) {
-            maxScore = value;
-            motivationType = key;
-        }
-    }
-
-    let message;
-    switch (motivationType) {
-        case "desafios":
-            message = "Você é motivado por desafios! Continue superando seus limites!";
-            break;
-        case "resultados":
-            message = "Você se sente motivado pelos resultados imediatos! Mantenha o foco!";
-            break;
-        case "apoio":
-            message = "Você é motivado pelo apoio de amigos e familiares! Aproveite essa rede de suporte!";
-            break;
-        case "comunidade":
-            message = "Você é motivado pela contribuição à comunidade! Continue a fazer a diferença!";
-            break;
-        default:
-            message = "Algo deu errado, tente novamente.";
-    }
-
-    resultElement.textContent = message;
-}
+ 
