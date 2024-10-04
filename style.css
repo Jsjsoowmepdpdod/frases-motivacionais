@@ -77,3 +77,22 @@ h1 {
     margin-bottom: 20px;
     font-family: 'Dancing Script', cursive; /* Define a fonte cursiva para o título */
 }
+/* Animação de gradiente de fundo em tons de azul */
+body {
+    animation: gradientBackground 10s infinite alternate;
+    background: linear-gradient(45deg, #0d47a1, #1976d2, #42a5f5);
+    background-size: 300% 300%;
+}
+
+/* Chaveframes da animação */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
