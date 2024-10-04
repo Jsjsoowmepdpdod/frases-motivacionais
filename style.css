@@ -8,7 +8,7 @@ body {
     margin: 0;
 }
 
- {
+.container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); 
     padding: 30px;
@@ -41,12 +41,21 @@ button:active {
     transform: scale(0.98);
 }
 
+.quote-box { /* Estilo para a caixa da frase */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com um pouco de transparência */
+    color: #000; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    margin-top: 20px; /* Espaçamento acima da caixa */
+    min-height: 40px; /* Altura mínima para a caixa */
+    animation: fadeIn 0.5s ease-in-out; /* Animação de fade in */
+    text-align: center; /* Centraliza o texto */
+}
+
 p {
     font-size: 18px;
     color: #000000;
     margin-top: 20px;
-    min-height: 40px;
-    animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -57,4 +66,3 @@ p {
         opacity: 1;
     }
 }
-
