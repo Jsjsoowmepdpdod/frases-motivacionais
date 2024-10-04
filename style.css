@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    animation: waveBackground 4s linear infinite; /* Animação contínua e rápida */
+    animation: waveBackground 10s linear infinite; /* Animação contínua e suave */
 }
 
 /* Animação do gradiente para simular movimento de água */
