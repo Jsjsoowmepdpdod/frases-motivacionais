@@ -94,3 +94,59 @@ function showPhrase() {
     phraseElement.textContent = '';
     typePhrase(phrases[randomIndex], phraseElement);
 }
+function calculateResult() {
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    const q3 = document.querySelector('input[name="q3"]:checked');
+    const q4 = document.querySelector('input[name="q4"]:checked');
+    const q5 = document.querySelector('input[name="q5"]:checked');
+    const resultElement = document.getElementById("result");
+
+    if (!q1 || !q2 || !q3 || !q4 || !q5) {
+        resultElement.textContent = "Por favor, responda todas as perguntas.";
+        return;
+    }
+
+    const scores = {
+        "desafios": 0,
+        "resultados": 0,
+        "apoio": 0,
+        "comunidade": 0
+    };
+
+    scores[q1.value - 1 === 0 ? "desafios" : (q1.value - 1 === 1 ? "resultados" : (q1.value - 1 === 2 ? "apoio" : "comunidade"))]++;
+    scores[q2.value - 1 === 0 ? "desafios" : (q2.value - 1 === 1 ? "resultados" : (q2.value - 1 === 2 ? "apoio" : "comunidade"))]++;
+    scores[q3.value - 1 === 0 ? "desafios" : (q3.value - 1 === 1 ? "resultados" : (q3.value - 1 === 2 ? "apoio" : "comunidade"))]++;
+    scores[q4.value - 1 === 0 ? "desafios" : (q4.value - 1 === 1 ? "resultados" : (q4.value - 1 === 2 ? "apoio" : "comunidade"))]++;
+    scores[q5.value - 1 === 0 ? "desafios" : (q5.value - 1 === 1 ? "resultados" : (q5.value - 1 === 2 ? "apoio" : "comunidade"))]++;
+
+    let maxScore = 0;
+    let motivationType = '';
+
+    for (const [key, value] of Object.entries(scores)) {
+        if (value > maxScore) {
+            maxScore = value;
+            motivationType = key;
+        }
+    }
+
+    let message;
+    switch (motivationType) {
+        case "desafios":
+            message = "Você é motivado por desafios! Continue superando seus limites!";
+            break;
+        case "resultados":
+            message = "Você se sente motivado pelos resultados imediatos! Mantenha o foco!";
+            break;
+        case "apoio":
+            message = "Você é motivado pelo apoio de amigos e familiares! Aproveite essa rede de suporte!";
+            break;
+        case "comunidade":
+            message = "Você é motivado pela contribuição à comunidade! Continue a fazer a diferença!";
+            break;
+        default:
+            message = "Algo deu errado, tente novamente.";
+    }
+
+    resultElement.textContent = message;
+}
