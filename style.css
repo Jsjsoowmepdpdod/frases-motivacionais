@@ -74,3 +74,79 @@ p {
         opacity: 1;
     }
 }
+/* Estilo do corpo com animação de gradiente */
+body {
+    background: linear-gradient(135deg, #0099ff, #66ccff, #66ccff, #0099ff);
+    background-size: 400% 400%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: waveBackground 12s ease infinite;
+}
+
+/* Animação do gradiente para simular movimento */
+@keyframes waveBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Estilos do container e elementos */
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+button {
+    background-color: #0008ff;
+    color: #a8caff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    background-color: #25006b;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+p {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 20px;
+    min-height: 40px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
