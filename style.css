@@ -1,6 +1,6 @@
 /* Estilo do corpo com animação de gradiente */
 body {
-    background: linear-gradient(30deg, #080080, #b8e7ff); /* Gradiente de azul escuro a azul claro */
+    background: linear-gradient(135deg, #080080, #b8e7ff); /* Gradiente de azul escuro a azul claro */
     background-size: 200% 200%; /* Aumenta o tamanho para mais movimento */
     font-family: 'Arial', sans-serif;
     display: flex;
