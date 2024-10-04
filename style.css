@@ -59,3 +59,38 @@ p {
         opacity: 1;
     }
 }
+.quiz-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Largura aumentada para acomodar mais perguntas */
+    margin: 20px auto;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px; /* Aumentada a margem para separar as perguntas */
+}
+
+button {
+    background-color: #0008ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #25006b;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px; /* Aumentada a fonte do resultado */
+    color: #333;
+    border: 1px solid #ccc; /* Adicionada borda para destacar o resultado */
+    padding: 10px;
+    border-radius: 5px;
+}
