@@ -52,13 +52,19 @@ const phrases = [
 ];
 
 let isTyping = false; 
+let lastIndex = -1;
 
 function showPhrase() {
-    if (isTyping) return; 
+    if (isTyping) return;
 
-    const randomIndex = Math.floor(Math.random() * phrases.length);
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * phrases.length);
+    } while (randomIndex === lastIndex); 
+
+    lastIndex = randomIndex;
     const phraseElement = document.getElementById("phrase");
-    phraseElement.textContent = ''; 
+    phraseElement.textContent = '';
     typePhrase(phrases[randomIndex], phraseElement);
 }
 
@@ -78,20 +84,6 @@ function typePhrase(phrase, element) {
     }
 
     type(); 
-}
-let lastIndex = -1;
-function showPhrase() {
-    if (isTyping) return;
-
-    let randomIndex;
-    do {
-        randomIndex = Math.floor(Math.random() * phrases.length);
-    } while (randomIndex === lastIndex); 
-
-    lastIndex = randomIndex;
-    const phraseElement = document.getElementById("phrase");
-    phraseElement.textContent = '';
-    typePhrase(phrases[randomIndex], phraseElement);
 }
 
  
