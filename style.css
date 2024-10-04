@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #1100ff, #b8e7ff); 
+    background: linear-gradient(135deg, #001f3f, #00aaff); 
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -10,27 +10,29 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Cantos arredondados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 300px; /* Largura da caixa */
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
     font-family: 'Dancing Script', cursive;
+    font-size: 24px; /* Tamanho do título */
 }
 
 button {
-    background-color: #1100ff;
-    color: #b8e7ff;
-    padding: 15px 30px;
+    background-color: #0008ff;
+    color: #ffffff;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: background-color 0.2s;
 }
 
 button:hover {
@@ -41,28 +43,9 @@ button:active {
     transform: scale(0.98);
 }
 
-.quote-box { /* Estilo para a caixa da frase */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com um pouco de transparência */
-    color: #000; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 10px; /* Cantos arredondados */
-    margin-top: 20px; /* Espaçamento acima da caixa */
-    min-height: 40px; /* Altura mínima para a caixa */
-    animation: fadeIn 0.5s ease-in-out; /* Animação de fade in */
-    text-align: center; /* Centraliza o texto */
-}
-
-p {
-    font-size: 18px;
-    color: #000000;
-    margin-top: 20px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.quote-box {
+    color: #333; /* Cor do texto */
+    margin-top: 20px; /* Espaçamento entre o botão e a frase */
+    font-size: 16px; /* Tamanho do texto */
+    font-style: italic; /* Texto em itálico */
 }
