@@ -79,3 +79,18 @@ function typePhrase(phrase, element) {
 
     type(); // Inicia o efeito de digitação
 }
+let lastIndex = -1; // Índice da última frase exibida
+
+function showPhrase() {
+    if (isTyping) return;
+
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * phrases.length);
+    } while (randomIndex === lastIndex); // Repete até achar um índice diferente
+
+    lastIndex = randomIndex; // Atualiza o índice da última frase exibida
+    const phraseElement = document.getElementById("phrase");
+    phraseElement.textContent = '';
+    typePhrase(phrases[randomIndex], phraseElement);
+}
