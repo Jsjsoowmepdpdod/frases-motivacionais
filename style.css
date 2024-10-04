@@ -1,14 +1,14 @@
 /* Estilo do corpo com animação de gradiente */
 body {
-    background: linear-gradient(135deg, #001f3f, #0074D9, #7FDBFF); /* Gradiente de azul muito escuro a azul claro */
-    background-size: 300% 300%; /* Aumenta o tamanho para mais movimento */
+    background: linear-gradient(135deg, #001f3f, #0056b3, #00aaff); /* Gradiente de azul escuro a azul claro */
+    background-size: 200% 200%; /* Aumenta o tamanho para mais movimento */
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    animation: waveBackground 10s linear infinite; /* Animação contínua e suave */
+    animation: waveBackground 5s linear infinite; /* Animação contínua e rápida */
 }
 
 /* Animação do gradiente para simular movimento de água */
