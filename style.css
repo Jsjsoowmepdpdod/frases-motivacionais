@@ -1,5 +1,6 @@
+/* Estilo do corpo com gradiente estático */
 body {
-    background-color: #f0f8ff;
+    background: linear-gradient(135deg, #001f3f, #00aaff); /* Gradiente de azul escuro a azul claro */
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -8,17 +9,19 @@ body {
     margin: 0;
 }
 
+/* Estilos do container e elementos */
 .container {
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
 }
 
 button {
@@ -56,24 +59,3 @@ p {
         opacity: 1;
     }
 }
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-body {
-    background: linear-gradient(135deg, #002aff, #e4e6fb);
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-h1 {
-    color: #333;
-    margin-bottom: 20px;
-    font-family: 'Dancing Script', cursive; /* Define a fonte cursiva para o título */
-} 
