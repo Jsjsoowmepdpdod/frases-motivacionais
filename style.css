@@ -1,14 +1,14 @@
 /* Estilo do corpo com animação de gradiente */
 body {
     background: linear-gradient(135deg, #003366, #66ccff); /* Gradiente de azul escuro a azul claro */
-    background-size: 400% 400%; /* Aumenta o tamanho para mais movimento */
+    background-size: 200% 200%; /* Aumenta o tamanho para mais movimento */
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    animation: waveBackground 8s ease infinite; /* Animação em loop */
+    animation: waveBackground 3s ease infinite; /* Diminui o tempo para 3 segundos para movimento mais rápido */
 }
 
 /* Animação do gradiente para simular movimento */
@@ -16,17 +16,8 @@ body {
     0% {
         background-position: 0% 50%;
     }
-    25% {
-        background-position: 100% 50%;
-    }
-    50% {
-        background-position: 0% 50%;
-    }
-    75% {
-        background-position: 100% 50%;
-    }
     100% {
-        background-position: 0% 50%;
+        background-position: 100% 50%; /* Vai de 0% a 100% em um único ciclo */
     }
 }
 
