@@ -66,7 +66,7 @@ function showPhrase() {
 function typePhrase(phrase, element) {
     isTyping = true; 
     let index = 0;
-    const typingSpeed = 450; 
+    const typingSpeed = 700; 
     function type() {
         if (index < phrase.length) {
             element.textContent += phrase.charAt(index); 
